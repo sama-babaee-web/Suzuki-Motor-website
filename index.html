@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki</title>
+    <link rel="shortcut icon" href="assest/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="main">
+        <header>
+            <a href="#"><img src="assest/img/logo.png" alt="logo-moto" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="#">Top Features</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2>Ready To <span>Race</span></h2>
+            <a href="#" class="btn">Ride Now</a>
+            <img src="assest/img/bike.png" alt="moto-suzuki" class='bike'>
+        </div>
+
+        <!-- Slider Content -->
+        <div class="slider">
+            <div class="slides active">
+                <h2><span>Engine</span><br>599 cc</h2>
+                <h2><span>Max Speed</span><br>260 Kmph</h2>
+            </div>
+            <div class="slides">
+                <h2><span>Mileage</span><br>14 Kmpl</h2>
+                <h2><span>0-100 Kmph</span><br>4 Seconds</h2>
+            </div>
+            <div class="slides">
+                <h2><span>Wheels</span><br>17-Inch Alloy </h2>
+                <h2><span>Tyre Type </span><br>Tubeless</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="https://www.linkedin.com/in/sama-babaee-54135324b/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                <li><a href="https://t.me/sama_b4" target="_blank"><i class="bi bi-telegram"></i></a></li>
+                <li><a href="https://www.instagram.com/sama_babaee_web/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://github.com/sama-babaee-web" target="_blank"><i class="bi bi-github"></i></a></li>
+
+            </ul>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+    <script>
+        // Toggle
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggle.onclick = function () {
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        // Slider
+        const slides = document.querySelectorAll('.slides')
+        const dots = document.querySelectorAll('.dot')
+        function setActive(i) {
+            for (slide of slides)
+                slide.classList.remove('active');
+            slides[i].classList.add('active');
+
+            for (dot of dots)
+                dot.classList.remove('active');
+            dots[i].classList.add('active');
+
+        }
+        for (let c = 0; c < dots.length; c++) {
+            dots[c].addEventListener('click', function () {
+                setActive(c)
+            })
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Created By Sama Babaee -->
